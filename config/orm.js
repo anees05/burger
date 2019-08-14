@@ -19,7 +19,7 @@ var orm = {
 
   update: function (table, col, conditional, cb) {
     var queryString = "UPDATE " + table + " SET " + col + " WHERE " + conditional;
-    connection.query(queryStr, function (err, res) {
+    connection.query(queryString, function (err, res) {
       if (err) throw err;
       cb(res)
     })
